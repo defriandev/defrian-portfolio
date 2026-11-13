@@ -61,13 +61,28 @@ export const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     const isExternal = href.startsWith("http") || href.startsWith("//");
+    const isSpecial = isExternal || href.startsWith("mailto:") || href.startsWith("tel:") || Boolean(download);
+
+    if (isSpecial) {
+      return (
+        <a
+          href={href}
+          className={combinedClasses}
+          target={target || (isExternal ? "_blank" : undefined)}
+          rel={rel || (isExternal ? "noopener noreferrer" : undefined)}
+          download={download}
+        >
+          {content}
+        </a>
+      );
+    }
+
     return (
       <Link
         href={href}
         className={combinedClasses}
-        target={target || (isExternal ? "_blank" : undefined)}
-        rel={rel || (isExternal ? "noopener noreferrer" : undefined)}
-        download={download}
+        target={target}
+        rel={rel}
       >
         {content}
       </Link>

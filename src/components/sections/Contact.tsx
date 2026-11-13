@@ -12,10 +12,27 @@ export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const email = "defrian.dev@gmail.com";
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+  const handleCopyEmail = async () => {
+    try {
+      if (typeof navigator !== "undefined" && navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        const textArea = document.createElement("textarea");
+        textArea.value = email;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-999999px";
+        textArea.style.top = "-999999px";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        document.execCommand("copy");
+        textArea.remove();
+      }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      setCopied(false);
+    }
   };
 
   return (

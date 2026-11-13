@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { GithubIcon } from "@/components/ui/Icons";
@@ -25,12 +26,27 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
   return (
     <motion.article
       whileHover={shouldReduceMotion ? undefined : { y: -5 }}
-      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] as const }}
       className={cn(
         "group relative flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-blue-200/80 hover:shadow-lg hover:shadow-blue-500/5",
         className
       )}
     >
+      {/* Project Thumbnail Image */}
+      <Link
+        href={`/projects/${project.slug}`}
+        aria-label={`View ${project.title} case study`}
+        className="block relative aspect-video w-full bg-slate-100 overflow-hidden border-b border-slate-100 focus:outline-none"
+      >
+        <Image
+          src={project.image}
+          alt={`Visual interface preview of ${project.title}`}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+        />
+      </Link>
+
       {/* Card Header & Status */}
       <div className="p-6 sm:p-7 flex-1 flex flex-col">
         <div className="flex items-center justify-between gap-3 mb-4">
@@ -59,7 +75,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
         {/* Title */}
         <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
           <Link href={`/projects/${project.slug}`} className="focus:outline-none">
-            <span className="absolute inset-0" aria-hidden="true" />
             {project.title}
           </Link>
         </h3>

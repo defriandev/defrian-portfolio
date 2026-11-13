@@ -1,0 +1,54 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <!-- Top Bar -->
+  <rect x="40" y="30" width="720" height="40" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <circle cx="65" cy="50" r="5" fill="#EF4444"/>
+  <circle cx="82" cy="50" r="5" fill="#F59E0B"/>
+  <circle cx="99" cy="50" r="5" fill="#10B981"/>
+  <rect x="130" y="42" width="220" height="16" rx="4" fill="#F1F5F9"/>
+  <!-- Search & Filter Bar -->
+  <rect x="40" y="85" width="720" height="60" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="60" y="100" width="260" height="30" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="75" y="120" font-family="sans-serif" font-size="12" fill="#94A3B8">Search role, skills, keywords...</text>
+  <rect x="335" y="100" width="160" height="30" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="350" y="120" font-family="sans-serif" font-size="12" fill="#94A3B8">Location / Remote</text>
+  <rect x="510" y="100" width="120" height="30" rx="6" fill="#2563EB"/>
+  <text x="548" y="120" font-family="sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Find Jobs</text>
+  <!-- Job Cards Grid -->
+  <!-- Card 1 -->
+  <rect x="40" y="160" width="345" height="120" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="60" y="180" width="36" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="72" y="203" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2563EB">JS</text>
+  <text x="108" y="195" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0F172A">Frontend Engineer</text>
+  <text x="108" y="210" font-family="sans-serif" font-size="11" fill="#64748B">TechCorp Global • Remote</text>
+  <rect x="60" y="235" width="60" height="20" rx="4" fill="#F1F5F9"/>
+  <text x="70" y="249" font-family="sans-serif" font-size="10" fill="#475569">React</text>
+  <rect x="128" y="235" width="80" height="20" rx="4" fill="#F1F5F9"/>
+  <text x="136" y="249" font-family="sans-serif" font-size="10" fill="#475569">TypeScript</text>
+  <rect x="290" y="180" width="75" height="24" rx="12" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="305" y="196" font-family="sans-serif" font-size="10" font-weight="600" fill="#059669">Full-time</text>
+  <!-- Card 2 -->
+  <rect x="415" y="160" width="345" height="120" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="435" y="180" width="36" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="447" y="203" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2563EB">TS</text>
+  <text x="483" y="195" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0F172A">UI/UX Web Developer</text>
+  <text x="483" y="210" font-family="sans-serif" font-size="11" fill="#64748B">Studio Craft • Jakarta</text>
+  <rect x="435" y="235" width="75" height="20" rx="4" fill="#F1F5F9"/>
+  <text x="444" y="249" font-family="sans-serif" font-size="10" fill="#475569">Tailwind</text>
+  <rect x="518" y="235" width="65" height="20" rx="4" fill="#F1F5F9"/>
+  <text x="526" y="249" font-family="sans-serif" font-size="10" fill="#475569">Next.js</text>
+  <rect x="665" y="180" width="75" height="24" rx="12" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="682" y="196" font-family="sans-serif" font-size="10" font-weight="600" fill="#2563EB">Hybrid</text>
+  <!-- Bottom Status Bar -->
+  <rect x="40" y="300" width="720" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="60" y="325" width="180" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="75" y="348" font-family="sans-serif" font-size="11" fill="#64748B">Active Postings</text>
+  <text x="75" y="372" font-family="sans-serif" font-size="18" font-weight="bold" fill="#0F172A">1,248 Jobs</text>
+  <rect x="260" y="325" width="180" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="275" y="348" font-family="sans-serif" font-size="11" fill="#64748B">Bookmarked</text>
+  <text x="275" y="372" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2563EB">18 Roles</text>
+  <rect x="460" y="325" width="280" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="475" y="348" font-family="sans-serif" font-size="11" fill="#64748B">Application Tracker</text>
+  <text x="475" y="372" font-family="sans-serif" font-size="18" font-weight="bold" fill="#10B981">4 In Progress</text>
+</svg>
+

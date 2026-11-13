@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ExternalLink, CheckCircle2, ShieldCheck, Layers } from "lucide-react";
 import { PROJECTS, getProjectBySlug } from "@/data/projects";
 import { Navbar } from "@/components/layout/Navbar";
@@ -133,6 +134,20 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 )}
               </div>
             </header>
+          </ScrollReveal>
+
+          {/* Project Preview Image */}
+          <ScrollReveal delay={0.12} duration={0.5}>
+            <div className="mb-12 relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm bg-slate-50">
+              <Image
+                src={project.image}
+                alt={`Screenshot preview of ${project.title}`}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 896px"
+                className="object-cover object-top"
+              />
+            </div>
           </ScrollReveal>
 
           {/* Project Details Content Grid */}

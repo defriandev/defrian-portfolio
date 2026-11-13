@@ -108,7 +108,7 @@ export const Hero: React.FC = () => {
             className="flex flex-wrap items-center gap-3.5 mb-12"
           >
             <Button
-              href="#projects"
+              href="/#projects"
               variant="primary"
               size="lg"
               icon={<ArrowDown className="w-4 h-4" />}

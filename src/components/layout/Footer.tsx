@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start">
             <Link
-              href="#home"
+              href="/#home"
               className="flex items-center gap-1.5 text-base font-bold tracking-tight text-slate-900"
             >
               <span className="w-2 h-2 rounded-sm bg-blue-600" />
@@ -27,12 +27,12 @@ export const Footer: React.FC = () => {
 
           {/* Quick Section Links */}
           <nav className="flex flex-wrap items-center justify-center gap-5 text-xs font-medium text-slate-600">
-            <a href="#home" className="hover:text-blue-600 transition-colors">Home</a>
-            <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
-            <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-blue-600 transition-colors">Experience</a>
-            <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
+            <Link href="/#home" className="hover:text-blue-600 transition-colors">Home</Link>
+            <Link href="/#about" className="hover:text-blue-600 transition-colors">About</Link>
+            <Link href="/#skills" className="hover:text-blue-600 transition-colors">Skills</Link>
+            <Link href="/#projects" className="hover:text-blue-600 transition-colors">Projects</Link>
+            <Link href="/#experience" className="hover:text-blue-600 transition-colors">Experience</Link>
+            <Link href="/#contact" className="hover:text-blue-600 transition-colors">Contact</Link>
           </nav>
 
           {/* Socials & Back to Top */}
@@ -55,13 +55,13 @@ export const Footer: React.FC = () => {
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>
-            <a
-              href="#home"
+            <Link
+              href="/#home"
               aria-label="Scroll back to top"
               className="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors ml-1"
             >
               <ArrowUp className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
 

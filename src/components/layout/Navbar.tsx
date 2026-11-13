@@ -8,12 +8,12 @@ import { NavItem } from "@/types";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const Navbar: React.FC = () => {
@@ -25,8 +25,8 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Section spy
-      const sections = NAV_ITEMS.map((item) => item.href.substring(1));
+      // Section spy based on elements on current page
+      const sections = NAV_ITEMS.map((item) => item.href.replace(/^\/?#/, ""));
       const scrollPos = window.scrollY + 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -38,8 +38,19 @@ export const Navbar: React.FC = () => {
       }
     };
 
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   return (
@@ -55,7 +66,7 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo with micro-interaction */}
           <Link
-            href="#home"
+            href="/#home"
             className="group flex items-center gap-1.5 text-lg font-bold tracking-tight text-slate-900 focus:outline-none"
           >
             <motion.span
@@ -70,9 +81,10 @@ export const Navbar: React.FC = () => {
           {/* Desktop Navigation with Animated Active Indicator */}
           <nav className="hidden md:flex items-center gap-1">
             {NAV_ITEMS.map((item) => {
-              const isActive = activeSection === item.href.substring(1);
+              const sectionId = item.href.replace(/^\/?#/, "");
+              const isActive = activeSection === sectionId;
               return (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
@@ -90,27 +102,27 @@ export const Navbar: React.FC = () => {
                     />
                   )}
                   {item.label}
-                </a>
+                </Link>
               );
             })}
           </nav>
 
           {/* Right Action CTA (Desktop) */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="inline-flex items-center gap-1 text-xs font-semibold px-3.5 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all shadow-xs active:scale-95 will-change-transform"
             >
               Get in Touch
               <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-transform active:scale-95"
+            className="md:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-transform active:scale-95 cursor-pointer"
             aria-label="Toggle navigation menu"
             aria-expanded={isOpen}
           >
@@ -130,9 +142,10 @@ export const Navbar: React.FC = () => {
             >
               <nav className="flex flex-col gap-1">
                 {NAV_ITEMS.map((item) => {
-                  const isActive = activeSection === item.href.substring(1);
+                  const sectionId = item.href.replace(/^\/?#/, "");
+                  const isActive = activeSection === sectionId;
                   return (
-                    <a
+                    <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
@@ -144,18 +157,18 @@ export const Navbar: React.FC = () => {
                       )}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   );
                 })}
                 <div className="pt-2 mt-2 border-t border-slate-100 px-2">
-                  <a
-                    href="#contact"
+                  <Link
+                    href="/#contact"
                     onClick={() => setIsOpen(false)}
                     className="w-full inline-flex items-center justify-center gap-1.5 text-sm font-medium px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Get in Touch
                     <ArrowUpRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </nav>
             </motion.div>

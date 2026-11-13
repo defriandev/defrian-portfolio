@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,7 +12,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#2563EB",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://defrian.dev"),
   title: "Defrian Bagus Dewanta Putra | Frontend Developer",
   description:
     "Personal portfolio of Defrian Bagus Dewanta Putra, a Frontend Developer crafting modern, accessible, and user-centric web applications.",
@@ -26,6 +33,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Defrian Bagus Dewanta Putra" }],
   creator: "Defrian Bagus Dewanta Putra",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
