@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 import { NavItem } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -26,7 +27,7 @@ export const Navbar: React.FC = () => {
 
       // Section spy
       const sections = NAV_ITEMS.map((item) => item.href.substring(1));
-      const scrollPos = window.scrollY + 100;
+      const scrollPos = window.scrollY + 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
@@ -52,17 +53,21 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo with micro-interaction */}
           <Link
             href="#home"
             className="group flex items-center gap-1.5 text-lg font-bold tracking-tight text-slate-900 focus:outline-none"
           >
-            <span className="w-2.5 h-2.5 rounded-sm bg-blue-600 transition-transform group-hover:scale-110" />
+            <motion.span
+              whileHover={{ rotate: 90 }}
+              transition={{ duration: 0.2 }}
+              className="w-2.5 h-2.5 rounded-sm bg-blue-600 inline-block"
+            />
             <span>Defrian</span>
             <span className="text-blue-600 font-mono text-sm">.dev</span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation with Animated Active Indicator */}
           <nav className="hidden md:flex items-center gap-1">
             {NAV_ITEMS.map((item) => {
               const isActive = activeSection === item.href.substring(1);
@@ -71,12 +76,19 @@ export const Navbar: React.FC = () => {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "px-3.5 py-1.5 text-sm font-medium rounded-md transition-colors duration-200",
+                    "relative px-3.5 py-1.5 text-sm font-medium rounded-lg transition-colors duration-200",
                     isActive
-                      ? "text-blue-600 bg-blue-50/80"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
+                      ? "text-blue-600"
+                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/60"
                   )}
                 >
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeNavBackground"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      className="absolute inset-0 bg-blue-50/90 rounded-lg -z-10"
+                    />
+                  )}
                   {item.label}
                 </a>
               );
@@ -87,7 +99,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center gap-3">
             <a
               href="#contact"
-              className="inline-flex items-center gap-1 text-xs font-semibold px-3.5 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all shadow-xs"
+              className="inline-flex items-center gap-1 text-xs font-semibold px-3.5 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all shadow-xs active:scale-95 will-change-transform"
             >
               Get in Touch
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -98,7 +110,7 @@ export const Navbar: React.FC = () => {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="md:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-transform active:scale-95"
             aria-label="Toggle navigation menu"
             aria-expanded={isOpen}
           >
@@ -106,43 +118,50 @@ export const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation Dropdown */}
-        {isOpen && (
-          <div className="md:hidden mt-3 pt-3 pb-4 px-2 bg-white/95 backdrop-blur-lg border border-slate-200 rounded-xl shadow-lg">
-            <nav className="flex flex-col gap-1">
-              {NAV_ITEMS.map((item) => {
-                const isActive = activeSection === item.href.substring(1);
-                return (
+        {/* Mobile Navigation Dropdown with AnimatePresence */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.98 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="md:hidden mt-3 pt-3 pb-4 px-2 bg-white/95 backdrop-blur-lg border border-slate-200 rounded-xl shadow-lg"
+            >
+              <nav className="flex flex-col gap-1">
+                {NAV_ITEMS.map((item) => {
+                  const isActive = activeSection === item.href.substring(1);
+                  return (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={cn(
+                        "px-4 py-2.5 text-sm font-medium rounded-lg transition-colors",
+                        isActive
+                          ? "text-blue-600 bg-blue-50"
+                          : "text-slate-700 hover:bg-slate-100"
+                      )}
+                    >
+                      {item.label}
+                    </a>
+                  );
+                })}
+                <div className="pt-2 mt-2 border-t border-slate-100 px-2">
                   <a
-                    key={item.href}
-                    href={item.href}
+                    href="#contact"
                     onClick={() => setIsOpen(false)}
-                    className={cn(
-                      "px-4 py-2.5 text-sm font-medium rounded-lg transition-colors",
-                      isActive
-                        ? "text-blue-600 bg-blue-50"
-                        : "text-slate-700 hover:bg-slate-100"
-                    )}
+                    className="w-full inline-flex items-center justify-center gap-1.5 text-sm font-medium px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
-                    {item.label}
+                    Get in Touch
+                    <ArrowUpRight className="w-4 h-4" />
                   </a>
-                );
-              })}
-              <div className="pt-2 mt-2 border-t border-slate-100 px-2">
-                <a
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                  className="w-full inline-flex items-center justify-center gap-1.5 text-sm font-medium px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get in Touch
-                  <ArrowUpRight className="w-4 h-4" />
-                </a>
-              </div>
-            </nav>
-          </div>
-        )}
+                </div>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
 };
-

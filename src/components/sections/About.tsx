@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Code2, Compass, Layout, Sparkles } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
 export const About: React.FC = () => {
   const principles = [
@@ -33,15 +36,17 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="py-20 md:py-28 bg-slate-50/60 border-t border-slate-200/80">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="About Me"
-          title="Bridging Design and Engineering."
-          description="A dedicated Frontend Developer with an academic background in Informatics and a passion for crafting polished digital experiences."
-        />
+        <ScrollReveal>
+          <SectionHeading
+            badge="About Me"
+            title="Bridging Design and Engineering."
+            description="A dedicated Frontend Developer with an academic background in Informatics and a passion for crafting polished digital experiences."
+          />
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Narrative Column */}
-          <div className="lg:col-span-7 space-y-5 text-slate-600 leading-relaxed text-base sm:text-lg">
+          <ScrollReveal delay={0.1} className="lg:col-span-7 space-y-5 text-slate-600 leading-relaxed text-base sm:text-lg">
             <p>
               Hello! I&apos;m <strong className="text-slate-900 font-semibold">Defrian Bagus Dewanta Putra</strong>, 
               a Frontend Developer from Indonesia pursuing a degree in{" "}
@@ -62,32 +67,30 @@ export const About: React.FC = () => {
               My career aspiration is to contribute as a Frontend / Software Engineer in an environment that values 
               code quality, user empathy, and forward-thinking engineering standards.
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Core Values / Focus Areas Column */}
-          <div className="lg:col-span-5 grid grid-cols-1 gap-4">
+          <StaggerContainer className="lg:col-span-5 grid grid-cols-1 gap-4" staggerDelay={0.1}>
             {principles.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-5 bg-white border border-slate-200/80 rounded-xl shadow-xs hover:border-slate-300 transition-colors"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 rounded-lg bg-blue-50 border border-blue-100/60">
-                    {item.icon}
+              <StaggerItem key={idx}>
+                <div className="p-5 bg-white border border-slate-200/80 rounded-xl shadow-xs hover:border-blue-200 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 rounded-lg bg-blue-50 border border-blue-100/60 group-hover:scale-105 transition-transform duration-200">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-semibold text-slate-900 text-sm sm:text-base group-hover:text-blue-600 transition-colors">
+                      {item.title}
+                    </h3>
                   </div>
-                  <h3 className="font-semibold text-slate-900 text-sm sm:text-base">
-                    {item.title}
-                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-normal pl-11">
+                    {item.description}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-normal pl-11">
-                  {item.description}
-                </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </section>
   );
 };
-

@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TIMELINE_ITEMS } from "@/data/experience";
 import { GraduationCap, Briefcase, Users, Calendar, MapPin } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
 export const Experience: React.FC = () => {
   const getTypeIcon = (type: string) => {
@@ -33,25 +36,27 @@ export const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-20 md:py-28 bg-white border-t border-slate-200/80">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Experience & Education"
-          title="Background & Milestones."
-          description="Academic foundation, practical internship experience (PKL), and collaborative organizational activities in informatics and software development."
-        />
+        <ScrollReveal>
+          <SectionHeading
+            badge="Experience & Education"
+            title="Background & Milestones."
+            description="Academic foundation, practical internship experience (PKL), and collaborative organizational activities in informatics and software development."
+          />
+        </ScrollReveal>
 
-        <div className="relative border-l border-slate-200 ml-3 sm:ml-4 pl-6 sm:pl-8 space-y-10">
+        <StaggerContainer className="relative border-l border-slate-200 ml-3 sm:ml-4 pl-6 sm:pl-8 space-y-10" staggerDelay={0.15}>
           {TIMELINE_ITEMS.map((item) => (
-            <div key={item.id} className="relative group">
+            <StaggerItem key={item.id} className="relative group">
               {/* Timeline marker node */}
-              <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 rounded-full bg-white border-2 border-slate-300 group-hover:border-blue-600 flex items-center justify-center transition-colors">
+              <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 rounded-full bg-white border-2 border-slate-300 group-hover:border-blue-600 flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors" />
               </div>
 
               {/* Card Container */}
-              <div className="bg-slate-50/70 border border-slate-200/80 rounded-xl p-5 sm:p-6 transition-all duration-200 hover:border-slate-300 hover:bg-white hover:shadow-xs">
+              <div className="bg-slate-50/70 border border-slate-200/80 rounded-xl p-5 sm:p-6 transition-all duration-300 hover:border-blue-200 hover:bg-white hover:shadow-md">
                 {/* Header metadata */}
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-white border border-slate-200 text-slate-700">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-white border border-slate-200 text-slate-700 shadow-2xs">
                     {getTypeIcon(item.type)}
                     <span>{getTypeLabel(item.type)}</span>
                   </div>
@@ -92,7 +97,7 @@ export const Experience: React.FC = () => {
                     {item.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs px-2 py-0.5 bg-white border border-slate-200 rounded text-slate-600 font-medium"
+                        className="text-xs px-2 py-0.5 bg-white border border-slate-200 rounded text-slate-600 font-medium shadow-2xs"
                       >
                         {tech}
                       </span>
@@ -100,11 +105,10 @@ export const Experience: React.FC = () => {
                   </div>
                 )}
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
 };
-

@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
 import { GithubIcon } from "@/components/ui/Icons";
 import { Project } from "@/types";
 import { cn } from "@/lib/utils";
@@ -11,6 +14,8 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
+  const shouldReduceMotion = useReducedMotion();
+
   const statusStyles = {
     Completed: "bg-emerald-50 text-emerald-700 border-emerald-200",
     "In Progress": "bg-amber-50 text-amber-700 border-amber-200",
@@ -18,9 +23,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
   };
 
   return (
-    <article
+    <motion.article
+      whileHover={shouldReduceMotion ? undefined : { y: -5 }}
+      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "group relative flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-slate-300 hover:shadow-md",
+        "group relative flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-blue-200/80 hover:shadow-lg hover:shadow-blue-500/5",
         className
       )}
     >
@@ -29,7 +36,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
         <div className="flex items-center justify-between gap-3 mb-4">
           <span
             className={cn(
-              "inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-full border",
+              "inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-full border transition-colors",
               statusStyles[project.status]
             )}
           >
@@ -39,7 +46,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
                 project.status === "Completed"
                   ? "bg-emerald-500"
                   : project.status === "In Progress"
-                  ? "bg-amber-500"
+                  ? "bg-amber-500 animate-pulse"
                   : "bg-slate-400"
               )}
             />
@@ -70,7 +77,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="inline-block px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-md"
+              className="inline-block px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-md group-hover:bg-slate-200/60 transition-colors"
             >
               {tech}
             </span>
@@ -84,8 +91,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
           href={`/projects/${project.slug}`}
           className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors"
         >
-          View Case Study
-          <ArrowUpRight className="w-3.5 h-3.5" />
+          <span>View Case Study</span>
+          <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </Link>
 
         <div className="flex items-center gap-2">
@@ -95,7 +102,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`GitHub repository for ${project.title}`}
-              className="p-1.5 text-slate-500 hover:text-slate-900 transition-colors rounded-md hover:bg-slate-200/60"
+              className="p-1.5 text-slate-500 hover:text-slate-900 transition-all rounded-md hover:bg-slate-200/60 active:scale-90"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
@@ -106,13 +113,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Live demo for ${project.title}`}
-              className="p-1.5 text-slate-500 hover:text-blue-600 transition-colors rounded-md hover:bg-slate-200/60"
+              className="p-1.5 text-slate-500 hover:text-blue-600 transition-all rounded-md hover:bg-slate-200/60 active:scale-90"
             >
               <ExternalLink className="w-4 h-4" />
             </a>
           )}
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };
