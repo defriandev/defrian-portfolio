@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     ],
     image: "/images/projects/jobfinder.png",
     demoUrl: "https://jobfinder-dashboard-demo.vercel.app",
-    githubUrl: "https://github.com/defrian/jobfinder-dashboard",
+    githubUrl: "https://github.com/defriandev/jobfinder-dashboard",
     featured: true,
   },
   {
@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
     ],
     image: "/images/projects/data-management.png",
     demoUrl: "https://data-management-dashboard-demo.vercel.app",
-    githubUrl: "https://github.com/defrian/data-management-dashboard",
+    githubUrl: "https://github.com/defriandev/data-management-dashboard",
     featured: true,
   },
   {
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     ],
     image: "/images/projects/aquarecommend.png",
     demoUrl: undefined, // Currently in progress
-    githubUrl: "https://github.com/defrian/aquarecommend-ai",
+    githubUrl: "https://github.com/defriandev/aquarecommend-ai",
     featured: true,
   },
 ];
@@ -75,3 +75,4 @@ export const PROJECTS: Project[] = [
 export function getProjectBySlug(slug: string): Project | undefined {
   return PROJECTS.find((p) => p.slug === slug);
 }
+

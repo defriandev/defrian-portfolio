@@ -43,3 +43,4 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     technologies: ["Teamwork", "Public Speaking", "Project Planning"],
   },
 ];
+

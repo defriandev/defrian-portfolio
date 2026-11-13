@@ -9,7 +9,7 @@ Designed with a **Minimalist Light — Modern Editorial** aesthetic, built with 
 ## 🚀 Live Demo & Links
 - **Portfolio Website**: [defrian.dev](https://defrian.dev)
 - **LinkedIn**: [linkedin.com/in/defrian](https://linkedin.com/in/defrian)
-- **GitHub**: [github.com/defrian](https://github.com/defrian)
+- **GitHub**: [github.com/defriandev](https://github.com/defriandev)
 
 ---
 
@@ -79,8 +79,8 @@ src/
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/defrian/portfolio.git
-   cd portfolio
+   git clone https://github.com/defriandev/defrian-portfolio.git
+   cd defrian-portfolio
    ```
 
 2. Install dependencies:
@@ -116,7 +116,7 @@ npm run build
    git add .
    git commit -m "feat: complete Defrian.dev portfolio"
    git branch -M main
-   git remote add origin https://github.com/<your-username>/portfolio.git
+   git remote add origin https://github.com/defriandev/defrian-portfolio.git
    git push -u origin main
    ```
 2. Import the repository in [Vercel](https://vercel.com/new).

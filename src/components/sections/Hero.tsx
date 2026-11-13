@@ -85,7 +85,7 @@ export const Hero: React.FC = () => {
                 Connect
               </span>
               <a
-                href="https://github.com/defrian"
+                href="https://github.com/defriandev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-slate-600 bg-slate-50 hover:bg-slate-100 hover:text-slate-900 border border-slate-200 rounded-lg transition-colors"

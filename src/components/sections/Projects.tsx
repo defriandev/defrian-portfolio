@@ -29,7 +29,7 @@ export const Projects: React.FC = () => {
             </span>
           </div>
           <a
-            href="https://github.com/defrian"
+            href="https://github.com/defriandev"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:text-blue-700 font-medium shrink-0"
@@ -41,3 +41,4 @@ export const Projects: React.FC = () => {
     </section>
   );
 };
+

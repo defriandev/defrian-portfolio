@@ -46,3 +46,4 @@ export const SKILL_GROUPS: SkillGroup[] = [
     ],
   },
 ];
+
