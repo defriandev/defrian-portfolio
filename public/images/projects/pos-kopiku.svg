@@ -1,0 +1,109 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <!-- Top Navigation Bar -->
+  <rect x="30" y="24" width="740" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <circle cx="55" cy="45" r="5" fill="#EF4444"/>
+  <circle cx="72" cy="45" r="5" fill="#F59E0B"/>
+  <circle cx="89" cy="45" r="5" fill="#10B981"/>
+  <text x="120" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0F172A">KopiKu POS ☕</text>
+  <rect x="235" y="34" width="75" height="22" rx="11" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="249" y="49" font-family="sans-serif" font-size="10" font-weight="600" fill="#2563EB">Meja 04</text>
+  <rect x="320" y="34" width="105" height="22" rx="11" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="332" y="49" font-family="sans-serif" font-size="10" font-weight="600" fill="#059669">Offline Ready</text>
+  <rect x="660" y="34" width="95" height="22" rx="6" fill="#F1F5F9"/>
+  <text x="675" y="49" font-family="sans-serif" font-size="10" font-weight="600" fill="#475569">🔒 Owner PIN</text>
+
+  <!-- Left: Cashier Menu Catalog (Width: 460) -->
+  <!-- Category Filter Tabs -->
+  <rect x="30" y="78" width="80" height="28" rx="6" fill="#2563EB"/>
+  <text x="48" y="96" font-family="sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Coffee</text>
+
+  <rect x="118" y="78" width="95" height="28" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="130" y="96" font-family="sans-serif" font-size="11" font-weight="500" fill="#64748B">Non-Coffee</text>
+
+  <rect x="221" y="78" width="75" height="28" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="235" y="96" font-family="sans-serif" font-size="11" font-weight="500" fill="#64748B">Makanan</text>
+
+  <rect x="304" y="78" width="65" height="28" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="318" y="96" font-family="sans-serif" font-size="11" font-weight="500" fill="#64748B">Snack</text>
+
+  <!-- Menu Item Grid (2 cols x 2 rows) -->
+  <!-- Item 1 -->
+  <rect x="30" y="118" width="220" height="135" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="42" y="130" width="196" height="55" rx="6" fill="#F1F5F9"/>
+  <circle cx="140" cy="157" r="18" fill="#E2E8F0"/>
+  <text x="135" y="162" font-family="sans-serif" font-size="14">☕</text>
+  <text x="42" y="202" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0F172A">Kopi Susu Gula Aren</text>
+  <text x="42" y="217" font-family="sans-serif" font-size="10" fill="#64748B">HPP: Rp 6.500 • Margin 64%</text>
+  <text x="42" y="238" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2563EB">Rp 18.000</text>
+  <rect x="195" y="222" width="43" height="22" rx="4" fill="#EFF6FF"/>
+  <text x="207" y="237" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563EB">+ 1</text>
+
+  <!-- Item 2 -->
+  <rect x="260" y="118" width="220" height="135" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="272" y="130" width="196" height="55" rx="6" fill="#F1F5F9"/>
+  <circle cx="370" cy="157" r="18" fill="#E2E8F0"/>
+  <text x="365" y="162" font-family="sans-serif" font-size="14">☕</text>
+  <text x="272" y="202" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0F172A">Caramel Macchiato</text>
+  <text x="272" y="217" font-family="sans-serif" font-size="10" fill="#64748B">HPP: Rp 8.000 • Margin 65%</text>
+  <text x="272" y="238" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2563EB">Rp 23.000</text>
+  <rect x="425" y="222" width="43" height="22" rx="4" fill="#2563EB"/>
+  <text x="439" y="237" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">+</text>
+
+  <!-- Item 3 -->
+  <rect x="30" y="265" width="220" height="135" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="42" y="277" width="196" height="55" rx="6" fill="#F1F5F9"/>
+  <circle cx="140" cy="304" r="18" fill="#E2E8F0"/>
+  <text x="135" y="309" font-family="sans-serif" font-size="14">🍵</text>
+  <text x="42" y="349" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0F172A">Matcha Latte Ice</text>
+  <text x="42" y="364" font-family="sans-serif" font-size="10" fill="#64748B">HPP: Rp 7.200 • Margin 64%</text>
+  <text x="42" y="385" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2563EB">Rp 20.000</text>
+  <rect x="195" y="369" width="43" height="22" rx="4" fill="#2563EB"/>
+  <text x="209" y="384" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">+</text>
+
+  <!-- Item 4 -->
+  <rect x="260" y="265" width="220" height="135" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="272" y="277" width="196" height="55" rx="6" fill="#F1F5F9"/>
+  <circle cx="370" cy="304" r="18" fill="#E2E8F0"/>
+  <text x="365" y="309" font-family="sans-serif" font-size="14">🥐</text>
+  <text x="272" y="349" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0F172A">Butter Croissant</text>
+  <text x="272" y="364" font-family="sans-serif" font-size="10" fill="#64748B">HPP: Rp 6.000 • Margin 60%</text>
+  <text x="272" y="385" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2563EB">Rp 15.000</text>
+  <rect x="425" y="369" width="43" height="22" rx="4" fill="#2563EB"/>
+  <text x="439" y="384" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">+</text>
+
+  <!-- Right: Active POS Cashier Bill / Cart (Width: 270) -->
+  <rect x="500" y="78" width="270" height="322" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="518" y="104" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0F172A">Order #KPK-0089</text>
+  <text x="688" y="104" font-family="sans-serif" font-size="10" fill="#64748B">Kasir 01</text>
+  <line x1="518" y1="116" x2="752" y2="116" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- Cart Item 1 -->
+  <text x="518" y="136" font-family="sans-serif" font-size="11" font-weight="600" fill="#0F172A">1x Kopi Susu Gula Aren</text>
+  <text x="705" y="136" font-family="sans-serif" font-size="11" font-weight="600" fill="#0F172A">18.000</text>
+  <text x="518" y="150" font-family="sans-serif" font-size="9" fill="#94A3B8">• Less Ice, Normal Sugar</text>
+
+  <!-- Cart Item 2 -->
+  <text x="518" y="174" font-family="sans-serif" font-size="11" font-weight="600" fill="#0F172A">1x Butter Croissant</text>
+  <text x="705" y="174" font-family="sans-serif" font-size="11" font-weight="600" fill="#0F172A">15.000</text>
+  <text x="518" y="188" font-family="sans-serif" font-size="9" fill="#94A3B8">• Warm serving</text>
+
+  <!-- Calculation Summary -->
+  <line x1="518" y1="210" x2="752" y2="210" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="518" y="232" font-family="sans-serif" font-size="10" fill="#64748B">Subtotal</text>
+  <text x="705" y="232" font-family="sans-serif" font-size="10" fill="#0F172A">Rp 33.000</text>
+  <text x="518" y="250" font-family="sans-serif" font-size="10" fill="#64748B">Pajak PB1 (10%)</text>
+  <text x="712" y="250" font-family="sans-serif" font-size="10" fill="#0F172A">Rp 3.300</text>
+
+  <rect x="514" y="265" width="242" height="35" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="524" y="287" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0F172A">Total Tagihan</text>
+  <text x="682" y="287" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2563EB">Rp 36.300</text>
+
+  <!-- Checkout Button -->
+  <rect x="514" y="312" width="242" height="36" rx="6" fill="#2563EB"/>
+  <text x="590" y="335" font-family="sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Bayar (QRIS / Tunai)</text>
+
+  <rect x="514" y="356" width="242" height="28" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="585" y="374" font-family="sans-serif" font-size="10" font-weight="500" fill="#64748B">Cetak Struk Digital</text>
+</svg>
+
