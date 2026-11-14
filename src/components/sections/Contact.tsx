@@ -10,7 +10,7 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/Scr
 
 export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const email = "defrian.dev@gmail.com";
+  const email = "defrianbagus1@gmail.com";
 
   const handleCopyEmail = async () => {
     try {
