@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
               <span className="text-blue-600 font-mono text-xs">.dev</span>
             </Link>
             <p className="text-xs text-slate-500 mt-1">
-              Defrian Bagus Dewanta Putra • Frontend Developer
+              Defrian Bagus Dewanta Putra • Frontend Enthusiast
             </p>
           </div>
 

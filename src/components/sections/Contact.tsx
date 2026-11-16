@@ -52,14 +52,14 @@ export const Contact: React.FC = () => {
             <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-xs hover:border-slate-300 hover:shadow-md transition-all duration-300">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-xs font-medium text-emerald-700 mb-6">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Open to Frontend Developer Opportunities
+                Open to Frontend Opportunities
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
                 Direct Communication
               </h3>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                I am actively seeking Frontend Developer roles and collaborations. 
+                I am actively seeking frontend engineering roles and collaborations. 
                 The fastest way to reach me is via email or LinkedIn.
               </p>
 
@@ -182,7 +182,7 @@ export const Contact: React.FC = () => {
                     Hiring Managers & HR
                   </h5>
                   <p className="text-xs text-blue-800/80 mt-1 leading-relaxed">
-                    Looking for a dedicated Frontend Developer ready to create impact? I am open to full-time, contract, and internship opportunities.
+                    Looking for a dedicated Frontend Enthusiast ready to create impact? I am open to full-time, contract, and internship opportunities.
                   </p>
                 </div>
               </div>

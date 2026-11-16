@@ -40,7 +40,7 @@ export const About: React.FC = () => {
           <SectionHeading
             badge="About Me"
             title="Bridging Design and Engineering."
-            description="A dedicated Frontend Developer with an academic background in Informatics and a passion for crafting polished digital experiences."
+            description="A dedicated Frontend Enthusiast with an academic background in Informatics and a passion for crafting polished digital experiences."
           />
         </ScrollReveal>
 
@@ -49,7 +49,7 @@ export const About: React.FC = () => {
           <ScrollReveal delay={0.1} className="lg:col-span-7 space-y-5 text-slate-600 leading-relaxed text-base sm:text-lg">
             <p>
               Hello! I&apos;m <strong className="text-slate-900 font-semibold">Defrian Bagus Dewanta Putra</strong>, 
-              a Frontend Developer from Indonesia pursuing a degree in{" "}
+              a Frontend Enthusiast from Indonesia pursuing a degree in{" "}
               <span className="text-slate-900 font-medium">D4 Teknik Informatika at Universitas Airlangga</span>.
             </p>
             <p>

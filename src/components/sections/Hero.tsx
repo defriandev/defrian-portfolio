@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
           >
             <span>Defrian Bagus Dewanta Putra</span>
             <span className="text-slate-300">•</span>
-            <span className="text-slate-600">Frontend Developer</span>
+            <span className="text-slate-600">Frontend Enthusiast</span>
           </motion.div>
 
           {/* Main Editorial Headline */}
@@ -82,7 +82,7 @@ export const Hero: React.FC = () => {
             variants={itemVariants}
             className="max-w-2xl text-lg sm:text-xl text-slate-600 leading-relaxed font-normal mb-8"
           >
-            I&apos;m a Frontend Developer focused on building responsive, accessible,
+            I&apos;m a Frontend Enthusiast focused on building responsive, accessible,
             and user-friendly web applications with clean architecture and scalable code.
           </motion.p>
 

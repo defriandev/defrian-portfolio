@@ -20,11 +20,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://defrian.dev"),
-  title: "Defrian Bagus Dewanta Putra | Frontend Developer",
+  title: "Defrian Bagus Dewanta Putra | Frontend Enthusiast",
   description:
-    "Personal portfolio of Defrian Bagus Dewanta Putra, a Frontend Developer crafting modern, accessible, and user-centric web applications.",
+    "Personal portfolio of Defrian Bagus Dewanta Putra, a Frontend Enthusiast crafting modern, accessible, and user-centric web applications.",
   keywords: [
     "Defrian Bagus Dewanta Putra",
+    "Frontend Enthusiast",
     "Frontend Developer",
     "Web Developer Indonesia",
     "React Developer",
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://defrian.dev",
-    title: "Defrian Bagus Dewanta Putra | Frontend Developer",
+    title: "Defrian Bagus Dewanta Putra | Frontend Enthusiast",
     description:
-      "Frontend Developer focused on building responsive, accessible, and user-friendly web applications.",
+      "Frontend Enthusiast focused on building responsive, accessible, and user-friendly web applications.",
     siteName: "Defrian.dev Portfolio",
   },
   icons: {
