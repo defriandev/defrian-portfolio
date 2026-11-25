@@ -19,7 +19,7 @@ export const Projects: React.FC = () => {
         </ScrollReveal>
 
         {/* Project Grid with Staggered Entrance */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch" staggerDelay={0.12}>
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch" staggerDelay={0.12}>
           {PROJECTS.map((project) => (
             <StaggerItem key={project.slug} className="flex">
               <ProjectCard project={project} className="w-full" />
