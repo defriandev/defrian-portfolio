@@ -114,9 +114,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     Live Demo
                   </Button>
                 ) : (
-                  <span className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-medium text-amber-800 bg-amber-50 border border-amber-200 rounded-lg">
-                    <ShieldCheck className="w-4 h-4 text-amber-600" />
-                    Live demo unavailable during active model development
+                  <span className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-medium text-slate-600 bg-slate-50 border border-slate-200 rounded-lg">
+                    <ShieldCheck className="w-4 h-4 text-slate-500" />
+                    Demo available via repository instructions
                   </span>
                 )}
 

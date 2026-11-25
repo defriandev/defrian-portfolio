@@ -1,0 +1,73 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <!-- Top Bar -->
+  <rect x="30" y="24" width="740" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <circle cx="55" cy="45" r="5" fill="#EF4444"/>
+  <circle cx="72" cy="45" r="5" fill="#F59E0B"/>
+  <circle cx="89" cy="45" r="5" fill="#10B981"/>
+  <text x="120" y="50" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0F172A">Studio Web Showcase — Multi-Niche Catalog</text>
+  <rect x="580" y="34" width="170" height="22" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="595" y="49" font-family="sans-serif" font-size="10" font-weight="600" fill="#2563EB">🖥️ Device Simulator Active</text>
+
+  <!-- Left: Main Showcase Hub Viewport (Width: 440) -->
+  <rect x="30" y="78" width="450" height="340" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="45" y="94" width="130" height="18" rx="4" fill="#EFF6FF"/>
+  <text x="55" y="107" font-family="sans-serif" font-size="9" font-weight="600" fill="#2563EB">SWISS EDITORIAL ARCHITECTURE</text>
+  
+  <text x="45" y="138" font-family="sans-serif" font-size="18" font-weight="bold" fill="#0F172A">Business Website Templates</text>
+  <text x="45" y="156" font-family="sans-serif" font-size="11" fill="#64748B">Curated commercial experiences with direct WhatsApp conversion funnels.</text>
+
+  <!-- 4 Niche Cards Grid inside portal -->
+  <rect x="45" y="174" width="195" height="105" rx="8" fill="#FFFBEB" stroke="#FDE68A"/>
+  <text x="57" y="194" font-family="sans-serif" font-size="11" font-weight="bold" fill="#92400E">☕ Kala Coffee &amp; Roastery</text>
+  <text x="57" y="210" font-family="sans-serif" font-size="9" fill="#B45309">F&amp;B • Live Open Status • Bento</text>
+  <rect x="57" y="244" width="85" height="22" rx="4" fill="#F59E0B"/>
+  <text x="69" y="259" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">View Demo ➔</text>
+
+  <rect x="255" y="174" width="195" height="105" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="267" y="194" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0F172A">✂️ Fort Worth Barbershop</text>
+  <text x="267" y="210" font-family="sans-serif" font-size="9" fill="#64748B">Grooming • Ledger Price • Dark</text>
+  <rect x="267" y="244" width="85" height="22" rx="4" fill="#0F172A"/>
+  <text x="279" y="259" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">View Demo ➔</text>
+
+  <rect x="45" y="290" width="195" height="110" rx="8" fill="#F0FDF4" stroke="#BBF7D0"/>
+  <text x="57" y="310" font-family="sans-serif" font-size="11" font-weight="bold" fill="#166534">🏢 NEXA Enterprise</text>
+  <text x="57" y="326" font-family="sans-serif" font-size="9" fill="#15803D">B2B Corporate • Metric Bento</text>
+  <rect x="57" y="360" width="85" height="22" rx="4" fill="#16A34A"/>
+  <text x="69" y="375" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">View Demo ➔</text>
+
+  <rect x="255" y="290" width="195" height="110" rx="8" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="267" y="310" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1E40AF">✈️ Wonder Tour &amp; Travel</text>
+  <text x="267" y="326" font-family="sans-serif" font-size="9" fill="#1D4ED8">Tourism • Cost Calculator</text>
+  <rect x="267" y="360" width="85" height="22" rx="4" fill="#2563EB"/>
+  <text x="279" y="375" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">View Demo ➔</text>
+
+  <!-- Right: Interactive Device Simulator Mockup (Width: 260) -->
+  <rect x="495" y="78" width="275" height="340" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <!-- Device Selector Pill -->
+  <rect x="515" y="92" width="235" height="30" rx="6" fill="#F1F5F9"/>
+  <rect x="518" y="95" width="75" height="24" rx="4" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="532" y="111" font-family="sans-serif" font-size="10" font-weight="bold" fill="#2563EB">Desktop</text>
+  <text x="612" y="111" font-family="sans-serif" font-size="10" fill="#64748B">Tablet</text>
+  <text x="682" y="111" font-family="sans-serif" font-size="10" fill="#64748B">Mobile</text>
+
+  <!-- Phone Mockup Frame inside simulator -->
+  <rect x="545" y="136" width="175" height="262" rx="16" fill="#0F172A" stroke="#334155" stroke-width="4"/>
+  <rect x="555" y="152" width="155" height="232" rx="8" fill="#FFFFFF"/>
+  <!-- Phone screen contents -->
+  <rect x="565" y="164" width="70" height="12" rx="3" fill="#2563EB"/>
+  <text x="568" y="173" font-family="sans-serif" font-size="7" font-weight="bold" fill="#FFFFFF">KALA COFFEE</text>
+  <rect x="565" y="184" width="135" height="50" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="573" y="200" font-family="sans-serif" font-size="8" font-weight="bold" fill="#0F172A">Espresso Roast</text>
+  <text x="573" y="212" font-family="sans-serif" font-size="7" fill="#64748B">IDR 24.000 • In Stock</text>
+  <rect x="573" y="218" width="55" height="12" rx="3" fill="#16A34A"/>
+  <text x="577" y="227" font-family="sans-serif" font-size="6" font-weight="bold" fill="#FFFFFF">Reserve Table</text>
+  
+  <rect x="565" y="242" width="135" height="60" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="573" y="258" font-family="sans-serif" font-size="8" font-weight="bold" fill="#0F172A">Cold Brew Tonic</text>
+  <text x="573" y="270" font-family="sans-serif" font-size="7" fill="#64748B">IDR 28.000 • Signature</text>
+
+  <rect x="565" y="310" width="135" height="28" rx="4" fill="#25D366"/>
+  <text x="583" y="328" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">💬 Book via WhatsApp</text>
+  <circle cx="632" cy="392" r="5" fill="#334155"/>
+</svg>
