@@ -120,6 +120,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   <span className="w-1.5 h-1.5 rounded-full bg-current" />
                   {project.status}
                 </span>
+
+                <span className="text-xs text-slate-600 font-medium">
+                  Built with sample data for demonstration
+                </span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 mb-4">
