@@ -9,6 +9,7 @@ interface ProjectImageProps {
   alt: string;
   width: number;
   height: number;
+  sizes?: string;
   className?: string;
   priority?: boolean;
 }
@@ -19,6 +20,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({
   alt,
   width,
   height,
+  sizes = "(max-width: 768px) 100vw, 800px",
   className,
   priority = false,
 }) => {
@@ -30,6 +32,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({
       alt={alt}
       width={width}
       height={height}
+      sizes={sizes}
       loading={priority ? undefined : "lazy"}
       priority={priority}
       onError={() => {

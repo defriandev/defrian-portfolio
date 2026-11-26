@@ -172,6 +172,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 alt={primaryImage.alt}
                 width={primaryImage.width}
                 height={primaryImage.height}
+                sizes="(max-width: 1024px) 100vw, 896px"
                 priority
                 className="w-full h-full object-cover object-top"
               />
@@ -306,6 +307,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                             alt={shot.alt}
                             width={shot.width}
                             height={shot.height}
+                            sizes="(max-width: 640px) 100vw, 440px"
                             className="w-full h-auto object-cover"
                           />
                           {shot.caption && (

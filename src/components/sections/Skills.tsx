@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SKILL_GROUPS } from "@/data/portfolio";

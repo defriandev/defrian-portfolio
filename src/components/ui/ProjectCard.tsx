@@ -1,9 +1,6 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
-import { motion, useReducedMotion } from "motion/react";
 import { GithubIcon } from "@/components/ui/Icons";
 import { ProjectImage } from "@/components/ui/ProjectImage";
 import { Project } from "@/types";
@@ -25,8 +22,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   primaryImage,
   className,
 }) => {
-  const shouldReduceMotion = useReducedMotion();
-
   const statusStyles = {
     Completed: "bg-emerald-50 text-emerald-700 border-emerald-200",
     "In Progress": "bg-amber-50 text-amber-700 border-amber-200",
@@ -39,11 +34,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   const imageHeight = primaryImage?.height || 450;
 
   return (
-    <motion.article
-      whileHover={shouldReduceMotion ? undefined : { y: -5 }}
-      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] as const }}
+    <article
       className={cn(
-        "group relative flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-blue-200/80 hover:shadow-lg hover:shadow-blue-500/5",
+        "group relative flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-200/80 hover:shadow-lg hover:shadow-blue-500/5",
         className
       )}
     >
@@ -59,6 +52,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           alt={imageAlt}
           width={imageWidth}
           height={imageHeight}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px"
           className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
         />
       </Link>
@@ -157,6 +151,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 };

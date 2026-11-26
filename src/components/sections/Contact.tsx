@@ -1,40 +1,14 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Mail, Check, Copy, ArrowUpRight, MessageSquare } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import { Mail, ArrowUpRight, MessageSquare } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
 import { Button } from "@/components/ui/Button";
+import { CopyEmailButton } from "@/components/ui/CopyEmailButton";
 import { CONTACT_INFO } from "@/data/portfolio";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
 export const Contact: React.FC = () => {
-  const [copied, setCopied] = useState(false);
   const email = CONTACT_INFO.email;
-
-  const handleCopyEmail = async () => {
-    try {
-      if (typeof navigator !== "undefined" && navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(email);
-      } else {
-        const textArea = document.createElement("textarea");
-        textArea.value = email;
-        textArea.style.position = "fixed";
-        textArea.style.left = "-999999px";
-        textArea.style.top = "-999999px";
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        document.execCommand("copy");
-        textArea.remove();
-      }
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
-    } catch {
-      setCopied(false);
-    }
-  };
 
   return (
     <section id="contact" className="py-20 md:py-28 bg-slate-50/60 border-t border-slate-200/80">
@@ -63,7 +37,7 @@ export const Contact: React.FC = () => {
                 I am actively seeking a Frontend Developer internship for next semester. 
                 The fastest way to reach me is via email,{" "}
                 <a
-                  href="https://wa.me/62859183875494"
+                  href={CONTACT_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline font-medium"
@@ -73,7 +47,7 @@ export const Contact: React.FC = () => {
                 , or LinkedIn.
               </p>
 
-              {/* Email Box with One-Click Copy & Micro-interaction */}
+              {/* Email Box with One-Click Copy */}
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 transition-colors hover:border-blue-200">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-lg bg-white border border-slate-200 text-blue-600 shadow-2xs">
@@ -88,38 +62,7 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={handleCopyEmail}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-all active:scale-95 cursor-pointer shadow-2xs"
-                    aria-label="Copy email address"
-                  >
-                    <AnimatePresence mode="wait">
-                      {copied ? (
-                        <motion.span
-                          key="copied"
-                          initial={{ scale: 0.8, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          exit={{ scale: 0.8, opacity: 0 }}
-                          className="inline-flex items-center gap-1.5"
-                        >
-                          <Check className="w-3.5 h-3.5 text-emerald-600" />
-                          <span className="text-emerald-700 font-semibold">Copied!</span>
-                        </motion.span>
-                      ) : (
-                        <motion.span
-                          key="copy"
-                          initial={{ scale: 0.8, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          exit={{ scale: 0.8, opacity: 0 }}
-                          className="inline-flex items-center gap-1.5"
-                        >
-                          <Copy className="w-3.5 h-3.5 text-slate-500" />
-                          <span>Copy</span>
-                        </motion.span>
-                      )}
-                    </AnimatePresence>
-                  </button>
+                  <CopyEmailButton email={email} />
 
                   <Button
                     href={`mailto:${email}?subject=Inquiry%20from%20Portfolio`}
@@ -143,7 +86,7 @@ export const Contact: React.FC = () => {
           <StaggerItem className="md:col-span-5 space-y-4">
             {/* GitHub Card */}
             <a
-              href="https://github.com/defriandev"
+              href={CONTACT_INFO.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-5 bg-white border border-slate-200/80 rounded-xl hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group active:scale-[0.99]"
@@ -156,7 +99,7 @@ export const Contact: React.FC = () => {
                   <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
                     GitHub Profile
                   </h3>
-                  <p className="text-xs text-slate-600">@defriandev • Code repositories &amp; contributions</p>
+                  <p className="text-xs text-slate-600">{CONTACT_INFO.githubHandle} • Code repositories &amp; contributions</p>
                 </div>
               </div>
               <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-slate-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -164,7 +107,7 @@ export const Contact: React.FC = () => {
 
             {/* LinkedIn Card */}
             <a
-              href="https://linkedin.com/in/defrian"
+              href={CONTACT_INFO.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-5 bg-white border border-slate-200/80 rounded-xl hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group active:scale-[0.99]"
@@ -194,12 +137,12 @@ export const Contact: React.FC = () => {
                   <p className="text-xs text-blue-800/80 mt-1 leading-relaxed">
                     Looking for a Frontend Developer intern next semester? Reach out via email or message me directly on{" "}
                     <a
-                      href="https://wa.me/62859183875494"
+                      href={CONTACT_INFO.whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-semibold underline hover:text-blue-950"
                     >
-                      WhatsApp (+62 859-1838-75494)
+                      WhatsApp ({CONTACT_INFO.whatsappDisplay})
                     </a>
                     .
                   </p>

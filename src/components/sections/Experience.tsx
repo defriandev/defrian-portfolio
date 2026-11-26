@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -138,6 +136,7 @@ export const Experience: React.FC<ExperienceProps> = ({ certificates = [] }) => 
                         alt={cert.alt}
                         width={cert.width}
                         height={cert.height}
+                        sizes="(max-width: 768px) 100vw, 480px"
                         loading="lazy"
                         className="w-full h-auto rounded-lg object-contain"
                       />

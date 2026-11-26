@@ -1,7 +1,10 @@
 "use client";
 
 import React from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { LazyMotion, m, useReducedMotion } from "motion/react";
+
+const loadFeatures = () =>
+  import("motion/react").then((mod) => mod.domAnimation);
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -26,19 +29,21 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: yOffset }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{
-        duration,
-        delay,
-        ease: [0.22, 1, 0.36, 1] as const, // Smooth cubic bezier easing
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
+    <LazyMotion features={loadFeatures}>
+      <m.div
+        initial={{ opacity: 0, y: yOffset }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{
+          duration,
+          delay,
+          ease: [0.22, 1, 0.36, 1] as const,
+        }}
+        className={className}
+      >
+        {children}
+      </m.div>
+    </LazyMotion>
   );
 };
 
@@ -54,22 +59,24 @@ export const StaggerContainer: React.FC<{
   }
 
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-      variants={{
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: staggerDelay,
+    <LazyMotion features={loadFeatures}>
+      <m.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-60px" }}
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: staggerDelay,
+            },
           },
-        },
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
+        }}
+        className={className}
+      >
+        {children}
+      </m.div>
+    </LazyMotion>
   );
 };
 
@@ -85,7 +92,7 @@ export const StaggerItem: React.FC<{
   }
 
   return (
-    <motion.div
+    <m.div
       variants={{
         hidden: { opacity: 0, y: yOffset },
         visible: {
@@ -100,6 +107,6 @@ export const StaggerItem: React.FC<{
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 };
