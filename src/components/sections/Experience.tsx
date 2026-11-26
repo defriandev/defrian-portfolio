@@ -80,8 +80,8 @@ export const Experience: React.FC<ExperienceProps> = ({ certificates = [] }) => 
                   {item.location && (
                     <>
                       <span className="text-slate-300">•</span>
-                      <span className="inline-flex items-center gap-1 text-xs text-slate-500">
-                        <MapPin className="w-3 h-3 text-slate-400" />
+                      <span className="inline-flex items-center gap-1 text-xs text-slate-600">
+                        <MapPin className="w-3 h-3 text-slate-500" />
                         {item.location}
                       </span>
                     </>

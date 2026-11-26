@@ -113,6 +113,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </span>
           ))}
         </div>
+
+        <p className="mt-4 text-[11px] text-slate-600">
+          Built with sample data for demonstration
+        </p>
       </div>
 
       {/* Card Footer with Case Study, GitHub, and conditional Live Demo Links */}
