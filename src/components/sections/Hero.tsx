@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span>Available for Frontend & Software Engineering Roles</span>
+              <span>Open for Internship</span>
             </div>
           </motion.div>
 
@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
           >
             <span>Defrian Bagus Dewanta Putra</span>
             <span className="text-slate-300">•</span>
-            <span className="text-slate-600">Frontend Enthusiast</span>
+            <span className="text-slate-600">Frontend Developer</span>
           </motion.div>
 
           {/* Main Editorial Headline */}
@@ -70,11 +70,11 @@ export const Hero: React.FC = () => {
             variants={itemVariants}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6"
           >
-            Building Digital Experiences with{" "}
+            Frontend Developer Building{" "}
             <span className="text-blue-600 underline decoration-blue-200 decoration-wavy decoration-2 underline-offset-8">
-              Modern Web
+              Web Applications
             </span>{" "}
-            Technologies.
+            with React &amp; Next.js.
           </motion.h1>
 
           {/* Description */}
@@ -82,8 +82,9 @@ export const Hero: React.FC = () => {
             variants={itemVariants}
             className="max-w-2xl text-lg sm:text-xl text-slate-600 leading-relaxed font-normal mb-8"
           >
-            I&apos;m a Frontend Enthusiast focused on building responsive, accessible,
-            and user-friendly web applications with clean architecture and scalable code.
+            D4 Teknik Informatika student at Universitas Airlangga (GPA 3.03/4.00) with
+            internship experience building 8+ LMS features in React and shipping web
+            projects with TypeScript and Next.js.
           </motion.p>
 
           {/* Quick Context Chips */}
@@ -134,7 +135,7 @@ export const Hero: React.FC = () => {
             className="pt-8 border-t border-slate-200/80 w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
           >
             <div className="flex items-center gap-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                 Connect
               </span>
               <a

@@ -6,11 +6,12 @@ import { Mail, Check, Copy, ArrowUpRight, MessageSquare } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
 import { Button } from "@/components/ui/Button";
+import { CONTACT_INFO } from "@/data/portfolio";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
 export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const email = "defrianbagus1@gmail.com";
+  const email = CONTACT_INFO.email;
 
   const handleCopyEmail = async () => {
     try {
@@ -52,15 +53,24 @@ export const Contact: React.FC = () => {
             <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-xs hover:border-slate-300 hover:shadow-md transition-all duration-300">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-xs font-medium text-emerald-700 mb-6">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Open to Frontend Opportunities
+                Open for Internship
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
                 Direct Communication
               </h3>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                I am actively seeking frontend engineering roles and collaborations. 
-                The fastest way to reach me is via email or LinkedIn.
+                I am actively seeking a Frontend Developer internship for next semester. 
+                The fastest way to reach me is via email,{" "}
+                <a
+                  href="https://wa.me/62859183875494"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline font-medium"
+                >
+                  WhatsApp
+                </a>
+                , or LinkedIn.
               </p>
 
               {/* Email Box with One-Click Copy & Micro-interaction */}
@@ -143,13 +153,13 @@ export const Contact: React.FC = () => {
                   <GithubIcon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
                     GitHub Profile
-                  </h4>
-                  <p className="text-xs text-slate-500">@defriandev • Code repositories & contributions</p>
+                  </h3>
+                  <p className="text-xs text-slate-600">@defriandev • Code repositories &amp; contributions</p>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-slate-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </a>
 
             {/* LinkedIn Card */}
@@ -164,13 +174,13 @@ export const Contact: React.FC = () => {
                   <LinkedinIcon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
                     LinkedIn Network
-                  </h4>
-                  <p className="text-xs text-slate-500">Professional profile & background</p>
+                  </h3>
+                  <p className="text-xs text-slate-600">Professional profile &amp; background</p>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-blue-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </a>
 
             {/* Quick Consultation / Chat Note */}
@@ -178,11 +188,20 @@ export const Contact: React.FC = () => {
               <div className="flex items-start gap-3">
                 <MessageSquare className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <div>
-                  <h5 className="text-xs font-bold text-blue-900 uppercase tracking-wide">
-                    Hiring Managers & HR
-                  </h5>
+                  <h3 className="text-xs font-bold text-blue-900 uppercase tracking-wide">
+                    Internship Inquiries &amp; WhatsApp
+                  </h3>
                   <p className="text-xs text-blue-800/80 mt-1 leading-relaxed">
-                    Looking for a dedicated Frontend Enthusiast ready to create impact? I am open to full-time, contract, and internship opportunities.
+                    Looking for a Frontend Developer intern next semester? Reach out via email or message me directly on{" "}
+                    <a
+                      href="https://wa.me/62859183875494"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold underline hover:text-blue-950"
+                    >
+                      WhatsApp (+62 859-1838-75494)
+                    </a>
+                    .
                   </p>
                 </div>
               </div>

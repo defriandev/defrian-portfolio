@@ -2,7 +2,7 @@
 
 import React from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { SKILL_GROUPS } from "@/data/skills";
+import { SKILL_GROUPS } from "@/data/portfolio";
 import { Code, Wrench, Layers } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 

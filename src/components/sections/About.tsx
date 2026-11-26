@@ -9,27 +9,27 @@ export const About: React.FC = () => {
   const principles = [
     {
       icon: <Layout className="w-5 h-5 text-blue-600" />,
-      title: "User-Centric Architecture",
+      title: "Component Architecture",
       description:
-        "Building interfaces with clean component hierarchies, clear visual rhythm, and intuitive user experiences.",
+        "Structuring reusable React and Next.js UI components with TypeScript for maintainable frontend codebases.",
     },
     {
       icon: <Code2 className="w-5 h-5 text-blue-600" />,
-      title: "Clean & Maintainable Code",
+      title: "API & Data Integration",
       description:
-        "Writing type-safe, modular, and documented TypeScript code following modern React standards.",
+        "Connecting frontend interfaces with REST APIs, Go backends, PostgreSQL/Prisma, and IndexedDB storage.",
     },
     {
       icon: <Compass className="w-5 h-5 text-blue-600" />,
-      title: "Continuous Exploration",
+      title: "Bug Investigation & Git Flow",
       description:
-        "Constantly refining skills in modern web technologies, UI engineering, and full-stack integration.",
+        "Collaborating via Git pull requests and tracing cross-layer application bugs alongside QA and backend teams.",
     },
     {
       icon: <Sparkles className="w-5 h-5 text-blue-600" />,
-      title: "Attention to Detail",
+      title: "Team & Org Leadership",
       description:
-        "Ensuring smooth micro-interactions, responsive adaptability across devices, and accessible markup.",
+        "Leading an 8-member student division and coordinating orientation programs for 135 incoming students.",
     },
   ];
 
@@ -39,8 +39,8 @@ export const About: React.FC = () => {
         <ScrollReveal>
           <SectionHeading
             badge="About Me"
-            title="Bridging Design and Engineering."
-            description="A dedicated Frontend Enthusiast with an academic background in Informatics and a passion for crafting polished digital experiences."
+            title="Background & Focus."
+            description="Informatics undergraduate at Universitas Airlangga focused on frontend development with React, Next.js, and TypeScript."
           />
         </ScrollReveal>
 
@@ -49,23 +49,25 @@ export const About: React.FC = () => {
           <ScrollReveal delay={0.1} className="lg:col-span-7 space-y-5 text-slate-600 leading-relaxed text-base sm:text-lg">
             <p>
               Hello! I&apos;m <strong className="text-slate-900 font-semibold">Defrian Bagus Dewanta Putra</strong>, 
-              a Frontend Enthusiast from Indonesia pursuing a degree in{" "}
-              <span className="text-slate-900 font-medium">D4 Teknik Informatika at Universitas Airlangga</span>.
+              a Frontend Developer and{" "}
+              <span className="text-slate-900 font-medium">D4 Teknik Informatika student at Universitas Airlangga</span>{" "}
+              (expected graduation 2027, GPA 3.03/4.00).
             </p>
             <p>
-              My journey in software development began with a curiosity for how design, data, and code converge to 
-              deliver seamless human interactions on the web. Over the course of my academic and practical projects, 
-              I have focused on mastering modern JavaScript/TypeScript ecosystems, specifically{" "}
-              <span className="text-blue-600 font-medium">React, Next.js, and Tailwind CSS</span>.
+              During my internship at <span className="text-slate-900 font-medium">PT Kuanta Prima Indonesia</span>, 
+              I worked in a 7-person team to build more than 8 features for an LMS web application—including dashboards, 
+              assessment forms, report cards, and a principal dashboard—integrating{" "}
+              <span className="text-blue-600 font-medium">React</span> interfaces with Go backend APIs.
             </p>
             <p>
-              I take pride in translating complex functional requirements into clean, intuitive, and responsive 
-              user interfaces. Beyond frontend code, I also appreciate working with backend APIs, database structures, 
-              and design tools like Figma to ensure cohesive product development.
+              Across personal and academic projects such as POS-KOPIKU, AestheticCRM, Jelajah Trip, and Studio Web Showcase, 
+              I focus on building functional web interfaces with{" "}
+              <span className="text-blue-600 font-medium">React, Next.js, TypeScript, and Tailwind CSS</span>, 
+              alongside handling Git pull requests and debugging.
             </p>
             <p className="text-slate-700 font-medium pt-2">
-              My career aspiration is to contribute as a Frontend / Software Engineer in an environment that values 
-              code quality, user empathy, and forward-thinking engineering standards.
+              I am currently open for a Frontend Developer internship next semester to contribute to production 
+              web applications and grow within an engineering team.
             </p>
           </ScrollReveal>
 

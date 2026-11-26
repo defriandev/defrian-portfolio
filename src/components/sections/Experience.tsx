@@ -1,12 +1,18 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { TIMELINE_ITEMS } from "@/data/experience";
-import { GraduationCap, Briefcase, Users, Calendar, MapPin } from "lucide-react";
+import { TIMELINE_ITEMS } from "@/data/portfolio";
+import { CertificateItem } from "@/types";
+import { GraduationCap, Briefcase, Users, Calendar, MapPin, Award } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
-export const Experience: React.FC = () => {
+interface ExperienceProps {
+  certificates?: CertificateItem[];
+}
+
+export const Experience: React.FC<ExperienceProps> = ({ certificates = [] }) => {
   const getTypeIcon = (type: string) => {
     switch (type) {
       case "education":
@@ -61,8 +67,8 @@ export const Experience: React.FC = () => {
                     <span>{getTypeLabel(item.type)}</span>
                   </div>
 
-                  <div className="flex items-center gap-1 text-xs text-slate-500 font-medium">
-                    <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                  <div className="flex items-center gap-1 text-xs text-slate-600 font-medium">
+                    <Calendar className="w-3.5 h-3.5 text-slate-500" />
                     <span>{item.period}</span>
                   </div>
                 </div>
@@ -97,7 +103,7 @@ export const Experience: React.FC = () => {
                     {item.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs px-2 py-0.5 bg-white border border-slate-200 rounded text-slate-600 font-medium shadow-2xs"
+                        className="text-xs px-2 py-0.5 bg-white border border-slate-200 rounded text-slate-700 font-medium shadow-2xs"
                       >
                         {tech}
                       </span>
@@ -108,6 +114,47 @@ export const Experience: React.FC = () => {
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        {/* Certificates Section (only rendered when image files exist in public/images/certs/) */}
+        {certificates.length > 0 && (
+          <ScrollReveal delay={0.15}>
+            <div className="mt-16 pt-12 border-t border-slate-200/80">
+              <div className="flex items-center gap-2 mb-6">
+                <Award className="w-5 h-5 text-blue-600" />
+                <h3 className="text-xl font-bold text-slate-900">
+                  Certificates &amp; Training
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {certificates.map((cert) => (
+                  <figure
+                    key={cert.id}
+                    className="bg-slate-50/70 border border-slate-200/80 rounded-xl overflow-hidden hover:border-blue-200 hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="relative bg-white border-b border-slate-200/80 p-3">
+                      <Image
+                        src={cert.image}
+                        alt={cert.alt}
+                        width={cert.width}
+                        height={cert.height}
+                        loading="lazy"
+                        className="w-full h-auto rounded-lg object-contain"
+                      />
+                    </div>
+                    <figcaption className="p-4">
+                      <p className="text-sm font-bold text-slate-900">{cert.name}</p>
+                      <p className="text-xs text-slate-600 mt-1">
+                        {cert.issuer} • {cert.issuedDate}
+                        {cert.credentialId ? ` • ID: ${cert.credentialId}` : ""}
+                      </p>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+        )}
       </div>
     </section>
   );

@@ -20,17 +20,16 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://defrian.dev"),
-  title: "Defrian Bagus Dewanta Putra | Frontend Enthusiast",
+  title: "Defrian Bagus Dewanta Putra | Frontend Developer",
   description:
-    "Personal portfolio of Defrian Bagus Dewanta Putra, a Frontend Enthusiast crafting modern, accessible, and user-centric web applications.",
+    "Personal portfolio of Defrian Bagus Dewanta Putra, a Frontend Developer and Informatics student open for internship.",
   keywords: [
     "Defrian Bagus Dewanta Putra",
-    "Frontend Enthusiast",
     "Frontend Developer",
+    "Frontend Intern",
     "Web Developer Indonesia",
     "React Developer",
     "Next.js Developer",
-    "Software Engineer",
   ],
   authors: [{ name: "Defrian Bagus Dewanta Putra" }],
   creator: "Defrian Bagus Dewanta Putra",
@@ -41,10 +40,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://defrian.dev",
-    title: "Defrian Bagus Dewanta Putra | Frontend Enthusiast",
+    title: "Defrian Bagus Dewanta Putra | Frontend Developer",
     description:
-      "Frontend Enthusiast focused on building responsive, accessible, and user-friendly web applications.",
+      "Frontend Developer and Informatics student building web applications with React, Next.js, and TypeScript. Open for Internship.",
     siteName: "Defrian.dev Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Defrian Bagus Dewanta Putra | Frontend Developer",
+    description:
+      "Frontend Developer and Informatics student building web applications with React, Next.js, and TypeScript. Open for Internship.",
   },
   icons: {
     icon: "/favicon.ico",

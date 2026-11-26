@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { PROJECTS } from "@/data/projects";
+import { PROJECTS } from "@/data/portfolio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://defrian.dev";
