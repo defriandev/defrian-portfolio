@@ -18,7 +18,6 @@ export const CONTACT_INFO: ContactInfo = {
 export const PROJECTS: Project[] = [
   {
     slug: "pos-kopiku",
-    // TODO: Isi problem, keyFrontendDecisions, challenges, result jika sudah siap
     title: "POS-KOPIKU",
     tagline: "Point of Sale & Cafe Management System Prototype",
     description:
@@ -27,6 +26,15 @@ export const PROJECTS: Project[] = [
       "POS-KOPIKU is a demonstration POS workspace for a cafe workflow. It features a cashier terminal with category filters and dine-in/take-away order carts, menu item creation with stock and variant options, QR table management, a 4-digit Owner PIN lock, and an owner analytics view showing revenue, COGS (HPP), and gross profit charts.",
     status: "Completed",
     role: "Frontend & Full-Stack Developer",
+    problem:
+      "Small cafés need a cashier screen that records orders quickly, including menu categories and variants, while keeping revenue, cost (COGS), and gross profit reports away from regular cashier staff.",
+    keyFrontendDecisions: [
+      "Split the workspace into focused tabs (Cashier, Menu Catalog, Tables & QR, Reports & Profit) with Next.js App Router, React, TypeScript, and Tailwind CSS. Used Zustand for cart state (dine-in or take-away, table selection, order items) so the cashier screen stays responsive without reloads, with Dexie.js (IndexedDB) and Supabase for local and database storage. Added a 4-digit PIN lock screen in front of the owner analytics page.",
+    ],
+    challenges:
+      "Keeping the menu catalog, stock, variant and table selection, and subtotal calculations consistent on the cashier screen, while separating the cashier view from the owner reports behind a PIN screen.",
+    result:
+      "A working POS prototype with sample data: cashier terminal, menu and stock management, table and QR management, PIN lock, and a sales and COGS dashboard covering 12 months.",
     // Frontend technologies ordered first
     techStack: [
       "Next.js",
@@ -85,7 +93,6 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "salon-crm",
-    // TODO: Isi problem, keyFrontendDecisions, challenges, result jika sudah siap
     title: "AestheticCRM",
     tagline: "Beauty Clinic & Salon Booking Concept Platform",
     description:
@@ -94,6 +101,15 @@ export const PROJECTS: Project[] = [
       "Built with Next.js App Router, TypeScript, Prisma, and PostgreSQL, AestheticCRM demonstrates a three-part clinic workflow: a public treatment showcase, a 4-step self-service booking flow that prevents overlapping appointments through availability checks, and an internal admin portal for reservation status tracking, service/therapist management, and pre-filled WhatsApp follow-up links.",
     status: "Completed",
     role: "Frontend & Full-Stack Developer",
+    problem:
+      "Clients often hesitate to book when forced to create an account first, while the clinic needs to avoid overlapping therapist schedules and track booking status easily.",
+    keyFrontendDecisions: [
+      "Split the app into three flows: a public service showcase, a 4-step self-service booking form (treatment, therapist and date, available time, name and WhatsApp, no login), and an admin dashboard. Used Next.js, TypeScript, Tailwind CSS, and Zod for form validation, with Prisma and PostgreSQL to check therapist availability and prevent overlapping appointments. Added a pre-filled WhatsApp link for consultation and follow-up.",
+    ],
+    challenges:
+      "Designing a multi-step booking flow that stays short without requiring login, while still validating therapist slots and dates against the database, and keeping services and therapists configured in the admin panel in sync with the public showcase.",
+    result:
+      "A demo reservation platform and mini-CRM with sample data (GlowLab Aesthetic Clinic): service showcase, 4-step booking that prevents overlapping slots through availability checks, admin filtering by booking status (Pending, Confirmed, Completed, Cancelled), and service and therapist management.",
     // Frontend technologies ordered first
     techStack: [
       "Next.js",
@@ -160,7 +176,6 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "jelajah-trip",
-    // TODO: Isi problem, keyFrontendDecisions, challenges, result jika sudah siap
     title: "Jelajah Trip",
     tagline: "Open Trip & Tour Booking Platform Prototype",
     description:
@@ -169,6 +184,15 @@ export const PROJECTS: Project[] = [
       "Jelajah Trip is a concept tour booking web application built with a decoupled Go Fiber REST API, PostgreSQL database, and React frontend. It presents curated Indonesian destination cards, search filters by destination, departure date, and group size, along with account login and order lookup flows using sample tour data.",
     status: "Completed",
     role: "Frontend & Full-Stack Developer",
+    problem:
+      "Travelers looking for open-trip packages across Indonesia need a clear catalog and a quick way to filter destinations by place, departure date, and group size.",
+    keyFrontendDecisions: [
+      "Built a decoupled React, TypeScript, and Tailwind CSS frontend that talks to a Go (Fiber) REST API with PostgreSQL. Placed the search filters (destination, date, participants) directly in the landing-page hero and presented destinations as scannable cards. Implemented login and registration pages with JWT-based sessions.",
+    ],
+    challenges:
+      "Connecting the React frontend to the Go REST endpoints consistently, including handling JWT authentication state and keeping destination search results in sync.",
+    result:
+      "A travel platform prototype with sample data, with source code on GitHub.",
     // Frontend technologies ordered first
     techStack: [
       "React",
@@ -186,7 +210,7 @@ export const PROJECTS: Project[] = [
       "Decoupled React frontend communicating with a Go Fiber REST API and PostgreSQL database",
       "Responsive layout structured for desktop and mobile browsing",
     ],
-    liveUrl: "https://jelajah-trip.vercel.app/",
+    liveUrl: undefined,
     repoUrl: "https://github.com/defriandev/jelajah-trip",
     fallbackImage: "/images/projects/jelajah-trip.svg",
     screenshots: [
@@ -219,7 +243,6 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "studio-web-showcase",
-    // TODO: Isi problem, keyFrontendDecisions, challenges, result jika sudah siap
     title: "Studio Web Showcase",
     tagline: "Interactive Multi-Niche Concept & Demo Catalog",
     description:
@@ -228,6 +251,15 @@ export const PROJECTS: Project[] = [
       "Studio Web Showcase is a concept/demo catalog built with React, TypeScript, Tailwind CSS, and Framer Motion. It demonstrates four distinct visual directions—Kala Roastery (Cafe), Fort Worth (Barbershop), NEXA_SYS (Company), and Wonder Tour (Travel)—accessible through a unified demo switcher and filterable catalog.",
     status: "Completed",
     role: "Frontend Developer",
+    problem:
+      "Business owners find it hard to imagine a website from a verbal description, so they need interactive examples that show how design differs by industry.",
+    keyFrontendDecisions: [
+      "Built an interactive demo catalog with React, TypeScript, Tailwind CSS, React Router, and Framer Motion, with category filters (All, F&B, Grooming, Corporate, Travel) and a top switcher bar to move between four concept demos in one app. Created four distinct visual identities in a single codebase: Kala Roastery (café), Fort Worth (barbershop), NEXA_SYS (corporate), and Wonder Tour (travel), each with a WhatsApp consultation link.",
+    ],
+    challenges:
+      "Keeping typography, color palettes, and styling of four contrasting themes, from a light editorial café to dark corporate and barbershop themes, from clashing inside one React SPA.",
+    result:
+      "An interactive concept catalog with sample data, deployed at demo-project-lovat-beta.vercel.app, with source code on GitHub.",
     techStack: [
       "React",
       "TypeScript",
