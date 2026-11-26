@@ -53,8 +53,8 @@ export const About: React.FC = () => {
             </p>
             <p>
               During my internship at <span className="text-slate-900 font-medium">PT Kuanta Prima Indonesia</span>, 
-              I worked in a 7-person team to build more than 8 features for an LMS web application—including dashboards, 
-              assessment forms, report cards, and a principal dashboard—integrating{" "}
+              I worked in a 7-person team to build more than 8 features for an LMS web application, including dashboards, 
+              assessment forms, report cards, and a principal dashboard, while integrating{" "}
               <span className="text-blue-600 font-medium">React</span> interfaces with Go backend APIs.
             </p>
             <p>

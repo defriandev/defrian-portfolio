@@ -44,7 +44,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       <Link
         href={`/projects/${project.slug}`}
         aria-label={`View ${project.title} case study`}
-        className="block relative aspect-video w-full bg-slate-100 overflow-hidden border-b border-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+        className="block relative aspect-video w-full bg-slate-50 overflow-hidden border-b border-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
       >
         <ProjectImage
           src={imageSrc}
@@ -53,7 +53,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           width={imageWidth}
           height={imageHeight}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px"
-          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </Link>
 

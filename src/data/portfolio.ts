@@ -416,18 +416,6 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     ],
     technologies: ["Event Planning", "Cross-Team Coordination"],
   },
-  {
-    id: "org-wakil-angkatan",
-    title: "Vice Class Representative — Cohort 2023 (Wakil Ketua Angkatan)",
-    organization: "D4 Teknik Informatika, Universitas Airlangga",
-    location: "Surabaya, Indonesia",
-    period: "Cohort 2023",
-    type: "organization",
-    description: [
-      "Served as a communication bridge between Informatics cohort 2023 students and faculty administration.",
-    ],
-    technologies: ["Student Communication"],
-  },
 ];
 
 export const CERTIFICATES: CertificateItem[] = [

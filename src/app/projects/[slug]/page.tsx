@@ -178,7 +178,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 height={primaryImage.height}
                 sizes="(max-width: 1024px) 100vw, 896px"
                 priority
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain"
               />
             </div>
           </ScrollReveal>
