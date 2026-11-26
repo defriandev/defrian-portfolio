@@ -163,7 +163,7 @@ export const PROJECTS: Project[] = [
       "Automated booking invoice generation and digital participant confirmation vouchers",
       "Responsive mobile-first interface optimized for travelers on cellular connections",
     ],
-    liveUrl: undefined,
+    liveUrl: "https://jelajah-trip.vercel.app/",
     repoUrl: "https://github.com/defriandev/jelajah-trip",
     fallbackImage: "/images/projects/jelajah-trip.svg",
     screenshots: [
