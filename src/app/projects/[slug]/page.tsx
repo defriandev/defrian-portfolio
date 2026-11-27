@@ -13,12 +13,12 @@ import {
   Link2,
 } from "lucide-react";
 import { PROJECTS, getProjectBySlug } from "@/data/portfolio";
-import { getAvailableScreenshots, getPrimaryProjectImage } from "@/lib/assets";
+import { getAvailableScreenshots } from "@/lib/assets";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { GithubIcon } from "@/components/ui/Icons";
-import { ProjectImage } from "@/components/ui/ProjectImage";
+import { ProjectGalleryCarousel } from "@/components/ui/ProjectGalleryCarousel";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 interface ProjectPageProps {
@@ -67,7 +67,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  const primaryImage = getPrimaryProjectImage(project);
   const availableScreenshots = getAvailableScreenshots(project);
 
   const hasRealText = (value?: string): value is string =>
@@ -167,20 +166,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </header>
           </ScrollReveal>
 
-          {/* Primary Project Preview Image */}
+          {/* Project Screenshots Carousel (Top Preview) */}
           <ScrollReveal delay={0.12} duration={0.5}>
-            <div className="mb-12 relative aspect-video w-full rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm bg-slate-50">
-              <ProjectImage
-                src={primaryImage.src}
-                fallbackSrc={project.fallbackImage}
-                alt={primaryImage.alt}
-                width={primaryImage.width}
-                height={primaryImage.height}
-                sizes="(max-width: 1024px) 100vw, 896px"
-                priority
-                className="w-full h-full object-contain"
-              />
-            </div>
+            <ProjectGalleryCarousel
+              screenshots={availableScreenshots}
+              fallbackImage={project.fallbackImage}
+              projectTitle={project.title}
+            />
           </ScrollReveal>
 
           {/* Project Details Content Grid */}
@@ -288,40 +280,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       {project.result}
                     </p>
-                  </section>
-                </ScrollReveal>
-              )}
-
-              {/* Screenshot Gallery (2-3 desktop/mobile images if available in public/images/projects/) */}
-              {availableScreenshots.length > 0 && (
-                <ScrollReveal delay={0.24}>
-                  <section>
-                    <h2 className="text-xl font-bold text-slate-900 mb-4">
-                      Screenshots
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {availableScreenshots.map((shot) => (
-                        <figure
-                          key={shot.src}
-                          className="bg-slate-50 border border-slate-200/80 rounded-xl overflow-hidden"
-                        >
-                          <ProjectImage
-                            src={shot.src}
-                            fallbackSrc={project.fallbackImage}
-                            alt={shot.alt}
-                            width={shot.width}
-                            height={shot.height}
-                            sizes="(max-width: 640px) 100vw, 440px"
-                            className="w-full h-auto object-cover"
-                          />
-                          {shot.caption && (
-                            <figcaption className="px-3.5 py-2.5 text-xs text-slate-600 border-t border-slate-200/60">
-                              {shot.caption}
-                            </figcaption>
-                          )}
-                        </figure>
-                      ))}
-                    </div>
                   </section>
                 </ScrollReveal>
               )}
