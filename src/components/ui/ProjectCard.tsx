@@ -52,7 +52,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           alt={imageAlt}
           width={imageWidth}
           height={imageHeight}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 640px"
           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </Link>

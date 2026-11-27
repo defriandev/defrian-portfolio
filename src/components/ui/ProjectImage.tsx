@@ -32,6 +32,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({
       alt={alt}
       width={width}
       height={height}
+      quality={95}
       sizes={sizes}
       loading={priority ? undefined : "lazy"}
       priority={priority}
